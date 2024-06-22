@@ -1,8 +1,17 @@
 def cetak_table_perkalian(number):
     pattern = ""
+    for i in range(1, number + 1):
+        for j in range(1, number + 1):
+            x = i * j
+            x_str = str(x)
+            space = " "
+            pattern += space + x_str
+
+        pattern += "\n"
     return pattern
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     cetak_table_perkalian(9)
     """
      1 2 3 4 5 6 7 8 9

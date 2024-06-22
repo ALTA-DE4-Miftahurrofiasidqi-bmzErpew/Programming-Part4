@@ -1,6 +1,7 @@
 import unittest
 from main import ubah_huruf
 
+
 class TestUbahHuruf(unittest.TestCase):
     def test_ubah_huruf_sentence_1(self):
         input_sentence = "SEPULSA OKE"
@@ -29,13 +30,21 @@ class TestUbahHuruf(unittest.TestCase):
         result = ubah_huruf(input_sentence)
         msg = f"Expected: {expected_output}, Got: {result}"
         self.assertEqual(result, expected_output, msg)
-        
+
     def test_ubah_huruf_sentence_5(self):
         input_sentence = "PROGRAMMER"
         expected_output = "ZBYQBKWWOB"
         result = ubah_huruf(input_sentence)
         msg = f"Expected: {expected_output}, Got: {result}"
         self.assertEqual(result, expected_output, msg)
-        
-if __name__ == '__main__':
+
+    def test_ubah_huruf_sentence_6(self):
+        input_sentence = "SEPULSA OKE ALTERRA ACADEMY INDONESIA GOLANG PROGRAMMER"
+        expected_output = "COZEVCK YUO KVDOBBK KMKNOWI SXNYXOCSK QYVKXQ ZBYQBKWWOB"
+        result = ubah_huruf(input_sentence)
+        msg = f"Expected: {expected_output}, Got: {result}"
+        self.assertEqual(result, expected_output, msg)
+
+
+if __name__ == "__main__":
     unittest.main()
